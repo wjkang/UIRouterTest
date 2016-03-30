@@ -7,9 +7,12 @@ app.config(function($stateProvider,$urlRouterProvider){
     $urlRouterProvider.when('', 'home');
     $urlRouterProvider.when('/', 'home');
     $urlRouterProvider.otherwise('home');
-    $stateProvider.state('home',{
-        url:'/home',
-        templateUrl:'partials/home.html'
+    $stateProvider.state('content',{
+        url:'/',
+        views: {
+            "":{templateUrl:'partials/content.html'},
+            "header@content":{templateUrl:'partials/header.html'}
+        }
     }).state('photos',{
         url:'/photos',
         templateUrl:'partials/photos.html'
